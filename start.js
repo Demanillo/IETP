@@ -24,7 +24,7 @@ app.use((err, req, res, next) => {
     console.error(err);
     res.status(err.statusCode).json(err);
 });
-/*
+
 var db_url = process.env.MONGODB_URI;
 MongoClient.connect(db_url, { useUnifiedTopology: true }, function (err, database) {
     if (err) {
@@ -124,4 +124,3 @@ app.delete('/annotations', function (req, res) {
         res.status(200).send();
     })
 });
-*/
