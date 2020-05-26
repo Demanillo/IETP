@@ -1,17 +1,11 @@
 var viewer;
 $(document).ready(function () {
     $("#forgeViewer").empty();
-    var urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZS5zdHA=';
-    var urn2 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL1Rlc3QuZjNk';
-    var urn3 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZTIyMi5mM2Q=';
-    var urn4 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZUxhc3QuZjNk';
-    var urn5 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZTIxMjMxLmYzZA==';
-    var urn6 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZVJseUxhc3QuZjNk';
-    var urn7 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0VuZ2luZVYyLmYzZA==';
-    var urn8 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0xhc3RvdmF5YS5mM2Q=';
+    var urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dDhkN3h2anZkY2VjdWx3eXN6ZmVpaWg1ZXZ0Z3RqYm8tZW5naW5lL0xhc3RvdmF5YS5mM2Q=';
+
     getForgeToken(function (access_token) {
         jQuery.ajax({
-            url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn8 + '/manifest',
+            url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn + '/manifest',
             headers: { 'Authorization': 'Bearer ' + access_token },
             success: function (res) {
                 if (res.status === 'success') launchViewer(urn8);
