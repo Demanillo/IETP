@@ -1,0 +1,540 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none!important;
+}
+
+.fill {
+    height: calc(100vh - 111px);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F2F2F2;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* .transition-width {
+    transition: flex 0.4s ease-in;
+} */
+
+.col-sm-3,
+.col-md-3 {
+    flex-grow: 1;
+    transition: all 400ms ease;
+}
+
+.col-sm-2,
+.col-md-2 {
+    flex-shrink: 1;
+    transition: all 400ms ease;
+}
+
+.navbar {
+    background-color: #FFCE73;
+    border-radius: 0 0 30px 30px;
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    padding: 10px 0;
+    border: none;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+
+.logo a img {
+    outline: none;
+}
+
+.navbar .title {
+    text-align: center;
+    line-height: 51px;
+}
+
+.panel {
+    margin-bottom: 0;
+}
+
+.tree .panel {
+    font-family: 'Titillium Web', sans-serif;
+    border: 3px solid #FFA840;
+    border-radius: 10px;
+    padding: 5px 4px 0 4px;
+}
+
+#compTree {
+    max-height: calc(100vh - 125px);
+    overflow: auto;
+}
+
+#compTree .jstree-container-ul {
+    padding-bottom: 5px;
+}
+
+.tree .panel,
+.textboard .panel {
+    box-shadow: 0 0 8px rgb(179, 135, 83);
+}
+
+.jstree-default .jstree-hovered {
+    background: rgb(255, 235, 205);
+}
+
+.jstree-default .jstree-clicked {
+    background: rgb(255, 217, 159);
+}
+
+.jstree-node {
+    font-size: 18px;
+}
+
+.jstree-children {
+    font-size: 16px;
+}
+
+.handleSelectionExtensionIcon {
+    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/object-group.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.AnimateCameraExtensionIcon {
+    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/rotate-left.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.viewer {
+    padding: 0 0 0 10px;
+}
+
+.textboard {
+    position: absolute;
+    top: 101px;
+    right: -100%;
+    padding: 0 15px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333333;
+    text-align: left;
+    transition: right 0.8s;
+}
+
+.textboard .textInfo {
+    overflow-y: auto;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    max-height: calc(100vh - 127px);
+}
+
+.slide-pos {
+    right: 0;
+}
+
+.textboard .panel {
+    border: 3px solid #FFA840;
+    border-radius: 10px;
+    padding: 5px 5px 5px 15px;
+}
+
+.textboard .headtext {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.textboard .maintext {
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 10px;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+.textInfo ul {
+    padding-left: 30px;
+}
+
+.textboard .link {
+    color: rgb(29, 122, 199);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+}
+
+.textboard .link:after {
+    background-color: rgb(29, 122, 199);
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+.textboard .maintext .link {
+    text-indent: 0;
+}
+
+.textboard .link:hover:after {
+    width: 100%;
+}
+
+.textboard .list {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.textboard .extra-img {
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: 2px solid rgba(29, 122, 199, 0.801);
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.extra-img a.fancybox img {
+    width: 100%;
+    height: 100%;
+}
+
+.MarkupIcon {
+    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/text-width.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.MarkupbrIcon {
+    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/paint-brush.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Markup3dExtensionIcon {
+    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/pencil-square-o.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.annotation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 0.5em;
+    max-width: 150px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: .5em;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+    transition: opacity 0.3s;
+    word-wrap: break-word;
+}
+
+.annotation-btn-close {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+    background-image: url(../img/closeAnn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.annotation-btn-close:hover {
+    background-image: url(../img/closeAnn_.png);
+}
+
+._wt {
+    right: 0;
+    top: -35px;
+}
+
+.annotation-without-text {
+    background: none;
+}
+
+.annotation-close {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s;
+}
+
+.annotation-close:hover {
+    background-image: url(../img/close_active.png);
+}
+
+.annotationIndex {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.text-annotation {
+    border-radius: 5px;
+    width: 234px;
+    height: 242px;
+    margin: 10px 5px 10px 5px;
+    color: black;
+    resize: none;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
+    border: none;
+}
+
+.an-cl-btn {
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 50px;
+    background-position: 0 19px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.btn-animations {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.btn-lg {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.adsk-viewing-viewer #toolbar-modelStructureTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-explodeTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-propertiesTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-fullscreenTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-settingsTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-bimWalkTool {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #allMyAwesomeExtensionsToolbar {
+    display: none!important;
+}
+
+.adsk-viewing-viewer #toolbar-animationPlay {
+    display: none!important;
+}
+
+#cube-loader {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10001;
+    background-color: #fff;
+}
+
+.loaded_hiding {
+    transition: 0.5s opacity;
+    opacity: 0;
+}
+
+#cube-loader .caption {
+    margin: 0 auto;
+}
+
+#cube-loader .cube-loader {
+    width: 73px;
+    height: 73px;
+    margin: 0 auto;
+    margin-top: 49px;
+    position: relative;
+    transform: rotateZ(45deg);
+}
+
+#cube-loader .cube-loader .cube {
+    position: relative;
+    transform: rotateZ(45deg);
+    width: 50%;
+    height: 50%;
+    float: left;
+    transform: scale(1.1);
+}
+
+#cube-loader .cube-loader .cube:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFA840;
+    animation: cube-loader 2.76s infinite linear both;
+    transform-origin: 100% 100%;
+}
+
+#cube-loader .cube-loader .loader-2 {
+    transform: scale(1.1) rotateZ(90deg);
+}
+
+#cube-loader .cube-loader .loader-3 {
+    transform: scale(1.1) rotateZ(180deg);
+}
+
+#cube-loader .cube-loader .loader-4 {
+    transform: scale(1.1) rotateZ(270deg);
+}
+
+#cube-loader .cube-loader .loader-2:before {
+    animation-delay: 0.35s;
+}
+
+#cube-loader .cube-loader .loader-3:before {
+    animation-delay: 0.69s;
+}
+
+#cube-loader .cube-loader .loader-4:before {
+    animation-delay: 1.04s;
+}
+
+@keyframes cube-loader {
+    0%,
+    10% {
+        transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+#toolbar-animation-timeline {
+    max-width: calc(100% - 305px);
+}
+
+.animation-timeline {
+    max-width: 100%;
+}
+
+.textInfo ul {
+    margin-bottom: 0;
+}
+
+.instruction {
+    transition: background 0.8s;
+}
+
+.activeText {
+    /* border-radius: 5px;
+    background-color: #abdfff;
+    padding: 5px 10px; */
+    /* color: #58ACFA; */
+    color: rgb(67, 159, 245);
+    text-shadow: 1px 1px 1px #beebff;
+    font-weight: 600;
+    transition: all 0.01s ease-in-out;
+}
+
+.btn-group-vertical button {
+    border-radius: 0.25rem!important;
+}
+
+#animToggle,
+#animQuit {
+    display: none;
+}
+
+.col-xs-0,
+.col-sm-0,
+.col-md-0,
+.col-lg-0 {
+    flex-shrink: 1;
+    transition: all 800ms;
+    max-width: 0;
+    opacity: 0;
+    padding: 0;
+}
