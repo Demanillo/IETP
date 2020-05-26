@@ -1,7 +1,7 @@
 var viewer;
 $(document).ready(function () {
     $("#forgeViewer").empty();
-    var urn = 'dXJuOmFkc2sub2JqZWN0czpvcy4xbm41akc0Qlhpb3kxcHFFNmdHUllzTkFpaG9pZG5oSS0xL0xhc3RvdmF5YS5mM2Q=';
+    var urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6MW5uNWpHNEJYaW95MXBxRTZnR1JZc05BaWhvaWRuaEktMS9MYXN0b3ZheWEuZjNk';
 
     getForgeToken(function (access_token) {
         jQuery.ajax({
