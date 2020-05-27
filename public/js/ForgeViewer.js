@@ -1,14 +1,14 @@
 var viewer;
 $(document).ready(function () {
     $("#forgeViewer").empty();
-    var urn = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6MW5uNWpHNEJYaW95MXBxRTZnR1JZc05BaWhvaWRuaEktMS9MYXN0b3ZheWEuZjNk';
+    var urn1 = 'dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6MW5uNWpnNGJ4aW95MXBxZTZnZ3J5c25haWhvaWRuaGktZm9yZ2VsZWFybi9FbmdpbmUuZjNk';
 
     getForgeToken(function (access_token) {
         jQuery.ajax({
-            url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn + '/manifest',
+            url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn1 + '/manifest',
             headers: { 'Authorization': 'Bearer ' + access_token },
             success: function (res) {
-                if (res.status === 'success') launchViewer(urn8);
+                if (res.status === 'success') launchViewer(urn1);
                 else $("#forgeViewer").html('Преобразование всё ещё выполняется').css('color', 'lightblue');
             }
         });
