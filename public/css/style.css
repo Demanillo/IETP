@@ -13,7 +13,7 @@
         font-size: 26px;
     }
     #textboard{
-       top: calc(100vh + 325px);
+       top: calc(100vh + 300px);
     }
     #tree .panel{
         height: 400px;
