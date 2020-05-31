@@ -9,8 +9,18 @@
     }
 }
 @media (max-width: 575px){
+    #navbar{
+        font-size: 26px;
+    }
     #textboard{
-       top: 950px; 
+       top: calc(100vh + 125px);
+    }
+    #tree .panel{
+        height: 400px;
+        max-height: 33vh;
+    }
+    #tree {
+        max-height: 33vh;
     }
 }
 
