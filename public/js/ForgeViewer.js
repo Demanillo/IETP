@@ -66,9 +66,9 @@ function onDocumentLoadSuccess(doc) {
                 $("#compTree").jstree("select_node", 'info');
                 $("#compTree").jstree("activate_node", 'info');
                 viewer.setBackgroundColor(242, 242, 242, 242, 242, 242);
-                $("#cube-loader").addClass("loaded_hiding");
+                $("#loader").addClass("loaded_hiding");
                 setTimeout(() => {
-                    $("#cube-loader").css("display", "none");
+                    $("#loader").css("display", "none");
                     // console.log(viewer.impl.modelQueue().getModels());
                 }, 500);
             }
