@@ -413,11 +413,11 @@ p {
 .adsk-viewing-viewer #toolbar-bimWalkTool {
     display: none!important;
 }
-
+/*
 .adsk-viewing-viewer #allMyAwesomeExtensionsToolbar {
     display: none!important;
 }
-
+*/
 .adsk-viewing-viewer #toolbar-animationPlay {
     display: none!important;
 }
